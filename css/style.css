@@ -2679,6 +2679,8 @@ label {
   /* Main */
   .section {
     padding: 6rem 0; }
+  .b-slide-first {
+    padding-bottom: 10rem; }
   .mats-1 {
     padding-top: 2rem; }
   .step-block[data-step]:after {
