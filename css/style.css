@@ -1284,6 +1284,9 @@ img {
     .modification .radio:last-child {
       margin-bottom: 0; }
 
+#result {
+  margin-left: .7rem; }
+
 .seo-text {
   background: #f9f9f9;
   padding: 5rem 0;

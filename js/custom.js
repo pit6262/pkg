@@ -32,6 +32,22 @@ $(function(){
 	lang();
 
 
+	/* Calc */
+	/* ---------------------------------------------- */
+	$('.calc-wrap input[type=radio]').each(function(){
+		$(this).change(calculate);
+	});
+
+	function calculate() {
+		var result = 0;
+		$('.calc-wrap input[type=radio]:checked').each(function(){
+		  result += Number($(this).val());
+		});
+
+		$("#result").html(result);
+	}
+
+
 	/* Tabs */
 	/* ---------------------------------------------- */
 	$('.tabs a').on('click', function(){
@@ -357,34 +373,8 @@ if($('#map').length){
 
        });
 
-
-
 		infowindow.open(map, marker);
 
-	    // google.maps.event.addDomListener(window, "resize", function() {
-	       
-	    //     google.maps.event.trigger(map, "resize");
-	       
-
-
-	
-	   //      if(widthWindow < 991) 
-				// map.setCenter({lat: 47.957222, lng: 33.409906})
-			
-	   //      else if(widthWindow < 767) 
-				// map.setCenter({lat: 47.957222, lng: 33.409706})
-			
-	   //      else if(widthWindow < 580) 
-				// map.setCenter({lat: 47.957222, lng: 33.410006})
-			
-	        
-	   //      else (widthWindow > 992) 
-				// map.setCenter({lat: 47.957222, lng: 33.409096})
-			
-	       
-
-
-	    // });
     }
 
     
