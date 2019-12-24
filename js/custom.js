@@ -57,6 +57,14 @@ $(function(){
 
 	/* Anchor Menu */
 	/* ---------------------------------------------- */
+	$('.anchor').on("click", function(e){
+		var anchor = $(this);
+		$('html, body').stop().animate({
+		  scrollTop: $(anchor.attr('href')).offset().top
+		}, 600);
+		e.preventDefault();
+
+	});
 	if($('.fixed-nav').length){
 		 
 		$('.fixed-nav a').on("click", function(e){
@@ -140,10 +148,8 @@ $(function(){
 
 if($('#map').length){
     function initMap() {
-        var myLatLng = {lat: 47.957022, lng: 33.408256};
-        var mapPs = {lat: 47.957222, lng: 33.409096};
-        // Create a map object and specify the DOM element
-        // for display.
+        var myLatLng = {lat: 47.956413, lng: 33.407902};
+
         var map = new google.maps.Map(document.getElementById('map'), {
 			center: myLatLng,
 			zoom: 18,

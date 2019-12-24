@@ -770,7 +770,8 @@ img {
 .section {
   padding: 8rem 0;
   overflow: hidden;
-  background: #fff; }
+  background: #fff;
+  position: relative; }
   .section-step-num {
     font-size: 5.8rem;
     line-height: 5.8rem;
@@ -807,6 +808,27 @@ img {
     max-width: 55rem;
     margin-left: auto;
     margin-right: auto; }
+
+.b-slide {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .b-slide-first {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100vh - 18.5rem); }
 
 .page-home .section {
   padding: 15rem 0; }
@@ -918,7 +940,7 @@ img {
 
 /* Home Page */
 .section-home {
-  min-height: 63rem;
+  min-height: calc(100vh - 12.2rem);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -930,11 +952,6 @@ img {
   align-items: center;
   position: relative;
   background: url("../img/section-home.png") no-repeat center; }
-  .section-home .scroll-down {
-    position: absolute;
-    bottom: 3rem;
-    left: 0;
-    right: 0; }
   .section-home .social {
     margin-top: 6rem; }
   .section-home .cub {
@@ -950,6 +967,12 @@ img {
     background: url("../img/pkg-group-bg.png") no-repeat center;
     width: 100%;
     background-size: cover; }
+
+.scroll-down {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  right: 0; }
 
 .section-catalog {
   padding: 6rem 0 !important;
@@ -1047,10 +1070,11 @@ img {
 /* end Home Page */
 /* Catalog Page */
 .section--white {
-  background: #fff;
+  background: transparent;
   position: relative;
   overflow: visible;
-  padding-top: 1rem !important; }
+  padding-top: 1rem !important;
+  padding-bottom: 6rem; }
   .section--white .wrapper {
     z-index: 2; }
   .section--white:before {
@@ -1062,8 +1086,8 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.4) 100%);
-    background: linear-gradient(to top, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0.4) 100%); }
+    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4) 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.4) 100%); }
   .section--white:after {
     content: '';
     display: block;
@@ -1072,7 +1096,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #fff url("../img/section-gray.png") repeat top left; }
+    background: rgba(255, 255, 255, 0.7) url("../img/section-gray.png") repeat top left; }
 
 .products-wrap {
   display: -webkit-box;
@@ -2472,6 +2496,11 @@ label {
   .lang {
     margin-top: .4rem;
     margin-bottom: .4rem; }
+  /* Home Page */
+  .section-home {
+    min-height: calc(100vh - 9.9rem); }
+  .b-slide-first {
+    min-height: calc(100vh - 16rem); }
   /* Card Page */
   .card__wrap {
     margin-left: -2rem;
@@ -2549,16 +2578,20 @@ label {
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0); }
   /* Home Page */
-  .section-home {
-    min-height: 45rem; }
-    .section-home:before {
-      display: none; }
+  .section-home:before {
+    display: none; }
+  .section-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   .sec-contacts-wrap {
     max-width: none;
     padding: 7rem 0; }
   .sec-contacts-map {
     position: static;
-    width: auto; }
+    width: 100%; }
     .sec-contacts-map #map {
       height: 54.3rem; }
   /* Catalog Page */
@@ -2658,7 +2691,6 @@ label {
     font-size: 45rem;
     line-height: 45rem; }
   .section-home {
-    min-height: 1px;
     padding: 11rem 0 !important; }
     .section-home .social {
       margin-top: 2rem; }
