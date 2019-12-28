@@ -12,7 +12,16 @@ $(function(){
 		$(this).toggleClass("open");
 		$('.navbar').toggleClass("open");
 		$('body').toggleClass('lock')
+		return false;
 	});
+
+	$(".close-cookies").on('click',function(){
+		$(this).parents('.cookies-block').hide();
+		return false;
+
+	});
+
+	
 
 	function overlay() {
 		$('.overlay').on('click',function(){
@@ -157,6 +166,17 @@ $(function(){
 			]
 		})
 	}
+
+	if($('.card-slider').length){
+		$('.card-slider').slick({
+			fade: true,
+			adaptiveHeight: true,
+			arrows: false,
+			dots: true,
+		})
+	}
+
+	
 });
 
 
@@ -353,12 +373,16 @@ if($('#map').length){
 		     
 		     
 		      '<div class="infowindow-body">'+
-			      '<div class="infowindow-title">Адреса</div>' +
-			      '<p>вул. Світлогірська, 74-А <br>м. Кривий Ріг, Україна</p> '+
-			      '<div class="infowindow-title">Контакти</div>' +
-			      '<p>0(67) 825 25 35 - багатоканальний <br>info@evroeskort.com.ua <br>sales@evroeskort.com.ua - відділ продажу</p> '+
+			      '<div class="infowindow-title">Адреса:</div>' +
+			      '<p>вул. Світлогірська, 74-А м. Кривий Ріг, Дніпропетровська область Україна, 50011</p> '+
+			      '<div class="infowindow-title">Контакти:</div>' +
+			      '<p>0(67) 825 25 35 (багатоканальний) <br>0(56) 440 25 30  <br>0(56) 405 25 30 (багатоканальний) <br />info@pkg-g.ua <br />sales@pkg-g.ua (відділ продажу)</p> '+
+		     	  '<div class="infowindow-title">Графік роботи:</div>' +
+			      '<p>Пн – Пт: з 9:00 до 18:00</p> '+
 		      '</div>'+
 	      '</div>';
+
+
 		var infowindow = new google.maps.InfoWindow({
 			content: contentString,
 			// pixelOffset: new google.maps.Size(340,237)
