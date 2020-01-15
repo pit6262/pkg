@@ -276,6 +276,24 @@ ul, ol {
         margin-left: 0;
         margin-right: 0; } }
 
+.table {
+  max-width: 100%;
+  margin-bottom: 3rem; }
+  .table th, .table td {
+    padding: .5rem 2rem; }
+  .table th {
+    padding: 1.5rem 2rem; }
+  .table td {
+    background: #fff; }
+  .table tr:nth-child(odd) td {
+    background: #f9f9f9; }
+
+.table-overflow {
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
+
 blockquote {
   border-left: 0.2rem solid rgba(106, 106, 106, 0.5);
   margin-bottom: 2rem;
@@ -1201,7 +1219,8 @@ img {
     margin-bottom: 3rem;
     position: relative; }
     .card-inner__img img {
-      max-height: 19rem; }
+      max-height: 19rem;
+      width: 100%; }
   .card-inner__num {
     position: absolute;
     left: 50%;
@@ -1297,32 +1316,9 @@ img {
     .card-slider .slick-dots {
       margin-top: 3rem; }
   .card-header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    margin: 0 -1rem; }
-    .card-header__left {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      margin-bottom: 2rem; }
-    .card-header__right {
-      -webkit-box-flex: 0;
-      -webkit-flex: none;
-      -ms-flex: none;
-      flex: none;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      width: 28rem;
-      margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
+    .card-header .btn {
+      min-width: 26rem; }
 
 .modification {
   display: -webkit-box;
@@ -1474,7 +1470,7 @@ img {
     left: 85%; }
   .mats-1 .angolo {
     top: 18%;
-    left: 50%; }
+    left: 49%; }
 
 .mats-2 .plus {
   top: -2rem;
@@ -1867,7 +1863,7 @@ img {
   background: rgba(0, 0, 0, 0.76);
   padding: 2rem;
   max-width: 29rem;
-  min-width: 25rem;
+  min-width: 29rem;
   font-size: 1.4rem;
   line-height: 1.5; }
   .popover-dropdown:before {
@@ -2485,6 +2481,8 @@ label {
       height: 2.9rem;
       background-color: #e9eff1;
       opacity: 0.05; }
+    .footer__logo img {
+      width: 20rem; }
 
 .social__link {
   display: inline-block;
