@@ -43,18 +43,18 @@ $(function(){
 
 	/* Calc */
 	/* ---------------------------------------------- */
-	$('.calc-wrap input[type=radio]').each(function(){
-		$(this).change(calculate);
-	});
+	// $('.calc-wrap input[type=radio]').each(function(){
+	// 	$(this).change(calculate);
+	// });
 
-	function calculate() {
-		var result = 0;
-		$('.calc-wrap input[type=radio]:checked').each(function(){
-		  result += Number($(this).val());
-		});
+	// function calculate() {
+	// 	var result = 0;
+	// 	$('.calc-wrap input[type=radio]:checked').each(function(){
+	// 	  result += Number($(this).val());
+	// 	});
 
-		$("#result").html(result);
-	}
+	// 	$("#result").html(result);
+	// }
 
 
 	/* Tabs */
@@ -370,8 +370,6 @@ if($('#map').length){
 
 		var widthWindow = $(window).width();
 		var contentString = '<div id="content">'+
-		     
-		     
 		      '<div class="infowindow-body">'+
 			      '<div class="infowindow-title">Адреса:</div>' +
 			      '<p>вул. Світлогірська, 74-А, м. Кривий Ріг, <br>Дніпропетровська область, Україна, 50011</p> '+
